@@ -8,9 +8,7 @@ class StaticPagesController < ApplicationController
 
   	#end
 
-    current_user
-
-    binding.pry
+   @current_user = current_user
 
   end
 

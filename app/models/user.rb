@@ -4,7 +4,7 @@ class User < ApplicationRecord
 
 	validates :first_name, presence: true
 	validates :last_name, presence: true
-	validates :username, presence: true
+	validates :username, presence: true, format: { without: /@/, message: "Can't include @" }
 	validates :email, presence: true, uniqueness: true
 	validates :password_digest, presence: true
 
